@@ -1,7 +1,7 @@
 {
-  "name": "new-folder",
+  "name": "aurelia-global-academy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Official website for Aurelia Global Academy (CBSE Affiliation No. 531849, Gurugram, India)",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -9,8 +9,17 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cbse-school",
+    "gurugram",
+    "education",
+    "k12",
+    "aurelia-global-academy",
+    "nextjs",
+    "react",
+    "tailwind"
+  ],
+  "author": "Devesh Yadav",
   "license": "ISC",
   "type": "module",
   "dependencies": {

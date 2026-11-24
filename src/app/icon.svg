@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2547" />
+      <stop offset="100%" stop-color="#1A3A6D" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5A93C" />
+      <stop offset="100%" stop-color="#B37814" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle for crisp browser tab icon -->
+  <circle cx="50" cy="50" r="48" fill="#0F2547" />
+  <!-- Outer Shield Trim -->
+  <path d="M50 14 L78 24 C78 52 65 72 50 84 C35 72 22 52 22 24 Z" fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="3" stroke-linejoin="round" />
+  <!-- Inner Border Line -->
+  <path d="M50 20 L73 28 C73 50 62 67 50 78 C38 67 27 50 27 28 Z" stroke="#D99B26" stroke-width="1.2" opacity="0.6" fill="none" />
+  <!-- Rising Sun Motif -->
+  <circle cx="50" cy="38" r="8" fill="url(#goldGrad)" />
+  <path d="M50 25 L50 28 M38 30 L40 33 M62 30 L60 33 M32 38 L35 38 M68 38 L65 38" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+  <!-- Open Academic Book -->
+  <path d="M50 60 C44 54 35 53 30 55 L30 67 C35 65 44 66 50 71 C56 66 65 65 70 67 L70 55 C65 53 56 54 50 60 Z" fill="#FFFFFF" opacity="0.95" />
+  <path d="M50 60 L50 71" stroke="#0F2547" stroke-width="1.5" stroke-linecap="round" />
+  <!-- Laurel sprig accents -->
+  <circle cx="27" cy="46" r="2.2" fill="#D99B26" />
+  <circle cx="73" cy="46" r="2.2" fill="#D99B26" />
+</svg>

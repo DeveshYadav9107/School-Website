@@ -133,5 +133,31 @@ npm start
 
 ---
 
+## 🌐 Deployment
+
+This project is fully configured and deployment-ready for top cloud platforms.
+
+### 1. Deploy on Vercel (Recommended)
+1. Go to [Vercel](https://vercel.com/) and click **"Add New Project"**.
+2. Select and import the GitHub repository: `DeveshYadav9107/School-Website`.
+3. Vercel automatically detects **Next.js**:
+   - **Framework Preset:** `Next.js`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `.next`
+4. Click **Deploy**. Your website will be live in under 1 minute with automatic SSL and global CDN!
+
+### 2. Deploy on Netlify
+1. Connect your repository to [Netlify](https://www.netlify.com/).
+2. Netlify will detect `@netlify/plugin-nextjs` or standard Next.js build.
+3. Click **Deploy Site**.
+
+### 3. Deploy via Docker or Node Server
+```bash
+npm run build
+npm start
+```
+
+---
+
 ## 📜 License & Accreditation
 Designed and developed for **Aurelia Global Academy**, Gurugram. Affiliated with the Central Board of Secondary Education (CBSE), New Delhi.

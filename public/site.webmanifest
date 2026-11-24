@@ -1,0 +1,17 @@
+{
+  "name": "Aurelia Global Academy",
+  "short_name": "Aurelia Academy",
+  "description": "Nurturing Curiosity, Shaping Character. CBSE Affiliated School in Gurugram.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F2547",
+  "theme_color": "#0F2547",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
