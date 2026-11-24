@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurelia Global Academy | CBSE Affiliated K-12 Institution | Gurugram, India</title>
+  <meta name="description" content="Aurelia Global Academy is a premier CBSE affiliated K-12 school in Gurugram, India (Affiliation No. 531849). Admissions open for academic session 2027-28." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#F0F4FA',
+              100: '#D9E3F3',
+              200: '#B3C8E7',
+              300: '#81A4D6',
+              400: '#4F7EC4',
+              500: '#2A5BB2',
+              600: '#1C428C',
+              700: '#15336C',
+              800: '#0F2547', // Primary Brand Color
+              900: '#0A1830',
+              950: '#050D1B',
+            },
+            gold: {
+              50: '#FDFBF4',
+              100: '#FAF3DD',
+              200: '#F3E4B3',
+              300: '#EBD184',
+              400: '#E2BC55',
+              500: '#D99B26', // Warm Gold Accent
+              600: '#BA801C',
+              700: '#946316',
+              800: '#734A12',
+              900: '#52340E',
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-gold-500 selection:text-white flex flex-col min-h-screen">
+
+  <!-- ========================================================================
+       1. TOP UTILITY STRIP
+       ======================================================================== -->
+  <header class="w-full bg-navy-950 text-slate-300 text-xs border-b border-navy-800/80 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
+      <!-- Left: Admissions alert & CBSE tag -->
+      <div class="flex items-center gap-3 flex-wrap justify-center md:justify-start">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 font-semibold border border-gold-500/30">
+          <span class="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+          Admissions Open for 2027-28
+        </span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span class="text-slate-300">CBSE Affiliation No: <strong class="text-white">531849</strong> (School Code: 41822)</span>
+      </div>
+
+      <!-- Right: Direct contact and Parent ERP Login -->
+      <div class="flex items-center gap-4 flex-wrap justify-center">
+        <a href="tel:+911244829100" class="hover:text-gold-400 transition-colors flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>+91 124 482 9100</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <a href="mailto:admissions@aureliaglobal.edu.in" class="hover:text-gold-400 transition-colors hidden lg:flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>admissions@aureliaglobal.edu.in</span>
+        </a>
+        <span class="text-slate-600 hidden lg:inline">|</span>
+        <button type="button" class="open-erp-modal-btn px-3 py-1 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-md shadow-sm transition-all duration-200 flex items-center gap-1.5 text-xs">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+          Parent ERP Login
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. STICKY MAIN NAVBAR
+       ======================================================================== -->
+  <nav class="sticky top-0 z-40 bg-navy-800 text-white shadow-lg border-b border-navy-700/60 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo & Name -->
+        <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg p-1">
+          <!-- Custom Academic Shield SVG Emblem -->
+          <div class="w-12 h-12 flex-shrink-0 relative group-hover:scale-105 transition-transform duration-300">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-md">
+              <!-- Outer Academic Shield -->
+              <path d="M50 4 L88 20 V52 C88 76 50 96 50 96 C50 96 12 76 12 52 V20 L50 4Z" fill="#0F2547" stroke="#D99B26" stroke-width="3"/>
+              <!-- Inner Shield Accent -->
+              <path d="M50 10 L82 24 V50 C82 70 50 88 50 88 C50 88 18 70 18 50 V24 L50 10Z" fill="#0A1830" stroke="#D99B26" stroke-width="1.2" stroke-dasharray="2 2"/>
+              <!-- Rising Sun at Apex -->
+              <circle cx="50" cy="30" r="10" fill="#D99B26"/>
+              <path d="M50 14 V18 M38 18 L41 21 M62 18 L59 21 M34 30 H38 M62 30 H66" stroke="#FAF3DD" stroke-width="2" stroke-linecap="round"/>
+              <!-- Laurel Leaves (Left) -->
+              <path d="M26 40 C28 44 26 50 24 54 C26 58 28 62 32 66" stroke="#D99B26" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="25" cy="42" r="2" fill="#D99B26"/>
+              <circle cx="23" cy="50" r="2" fill="#D99B26"/>
+              <circle cx="28" cy="60" r="2" fill="#D99B26"/>
+              <!-- Laurel Leaves (Right) -->
+              <path d="M74 40 C72 44 74 50 76 54 C74 58 72 62 68 66" stroke="#D99B26" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="75" cy="42" r="2" fill="#D99B26"/>
+              <circle cx="77" cy="50" r="2" fill="#D99B26"/>
+              <circle cx="72" cy="60" r="2" fill="#D99B26"/>
+              <!-- Open Academic Book in Center -->
+              <path d="M34 52 C42 48 48 50 50 54 C52 50 58 48 66 52 V68 C58 64 52 66 50 70 C48 66 42 64 34 68 Z" fill="#FFFFFF" stroke="#0F2547" stroke-width="1.5"/>
+              <path d="M50 54 V70" stroke="#D99B26" stroke-width="2"/>
+              <!-- Academic Star at Bottom -->
+              <polygon points="50,78 52,83 57,83 53,86 55,91 50,88 45,91 47,86 43,83 48,83" fill="#D99B26"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-white font-heading leading-tight group-hover:text-gold-400 transition-colors">
+              Aurelia Global Academy
+            </span>
+            <span class="text-[11px] font-medium text-gold-400 tracking-wider uppercase">
+              Nurturing Curiosity, Shaping Character • Gurugram
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden xl:flex items-center space-x-1 lg:space-x-3">
+          <a href="#home" onclick="navigateTo('home'); return false;" data-view="home" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-gold-500 font-semibold">Home</a>
+          <a href="#about" onclick="navigateTo('about'); return false;" data-view="about" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-slate-300">About Us</a>
+          <a href="#academics" onclick="navigateTo('academics'); return false;" data-view="academics" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-slate-300">Academics</a>
+          <a href="#admissions" onclick="navigateTo('admissions'); return false;" data-view="admissions" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-slate-300">Admissions</a>
+          <a href="#gallery" onclick="navigateTo('gallery'); return false;" data-view="gallery" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-slate-300">Campus & Gallery</a>
+          <a href="#disclosure" onclick="navigateTo('disclosure'); return false;" data-view="disclosure" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-slate-300">Mandatory Disclosure</a>
+          <a href="#contact" onclick="navigateTo('contact'); return false;" data-view="contact" class="nav-link px-3 py-2 text-sm font-medium transition-colors hover:text-gold-400 text-slate-300">Contact</a>
+        </div>
+
+        <!-- CTA & Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="navigateTo('admissions');" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-950 font-bold rounded-lg shadow-md hover:shadow-gold-500/20 transition-all duration-200 transform hover:-translate-y-0.5 text-sm">
+            <span>Apply Now</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-navy-700 focus:outline-none focus:ring-2 focus:ring-gold-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay & Sidebar -->
+  <aside id="mobile-drawer" class="fixed inset-y-0 right-0 z-50 w-80 max-w-[85vw] bg-navy-900 text-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between border-l border-navy-700/80">
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-navy-800">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+              <path d="M50 4 L88 20 V52 C88 76 50 96 50 96 C50 96 12 76 12 52 V20 L50 4Z" fill="#0F2547" stroke="#D99B26" stroke-width="3"/>
+              <circle cx="50" cy="30" r="10" fill="#D99B26"/>
+              <path d="M34 52 C42 48 48 50 50 54 C52 50 58 48 66 52 V68 C58 64 52 66 50 70 C48 66 42 64 34 68 Z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <span class="font-bold text-base font-heading">Aurelia Academy</span>
+        </div>
+        <button type="button" id="close-mobile-menu" aria-label="Close Menu" class="p-2 text-slate-400 hover:text-white rounded-lg focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col space-y-1.5">
+        <a href="#home" onclick="navigateTo('home');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">Home</a>
+        <a href="#about" onclick="navigateTo('about');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">About Us</a>
+        <a href="#academics" onclick="navigateTo('academics');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">Academics</a>
+        <a href="#admissions" onclick="navigateTo('admissions');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">Admissions & Fee Estimator</a>
+        <a href="#gallery" onclick="navigateTo('gallery');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">Campus & Gallery</a>
+        <a href="#disclosure" onclick="navigateTo('disclosure');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">Mandatory Public Disclosure</a>
+        <a href="#contact" onclick="navigateTo('contact');" class="mobile-nav-link py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-gold-400">Contact & Tour Booking</a>
+      </nav>
+    </div>
+
+    <div class="p-6 border-t border-navy-800 space-y-3">
+      <button type="button" onclick="navigateTo('admissions');" class="w-full py-2.5 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-lg text-sm shadow">
+        Apply Now for 2027-28
+      </button>
+      <button type="button" class="open-erp-modal-btn w-full py-2.5 bg-navy-800 hover:bg-navy-700 text-gold-400 font-semibold rounded-lg text-sm border border-gold-500/30 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+        Parent ERP Portal
+      </button>
+      <p class="text-[11px] text-center text-slate-500">Helpline: +91 124 482 9100</p>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN APPLICATION VIEWS CONTAINER (SPA)
+       ======================================================================== -->
+  <main class="flex-1">
+
+    <!-- ======================================================================
+         VIEW 1: HOME VIEW
+         ====================================================================== -->
+    <div id="view-home" class="spa-view block">
+      
+      <!-- HERO SECTION -->
+      <section class="relative bg-navy-950 text-white min-h-[640px] lg:min-h-[700px] flex items-center overflow-hidden">
+        <!-- Campus Architecture Background with Dark Navy Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=80" 
+               alt="Aurelia Global Academy Campus Building" 
+               class="w-full h-full object-cover object-center opacity-30 transform scale-105 transition-transform duration-1000"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1800&q=80'"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-900/60"></div>
+          <!-- Subtle geometric grid pattern -->
+          <div class="absolute inset-0 bg-[radial-gradient(#D99B26_1px,transparent_1px)] [background-size:28px_28px] opacity-10"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left: Content -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-400/40 text-gold-300 text-xs font-semibold backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+                CBSE Affiliated Senior Secondary Institution (No. 531849)
+              </div>
+
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading leading-tight text-white">
+                Nurturing Curiosity,<br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500">
+                  Shaping Character
+                </span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
+                Ranked <strong class="text-white">#1 K-12 CBSE Institution in Gurugram</strong>. Our 18-acre green campus integrates NEP 2020 experiential learning, STREAM robotics innovation, Olympic-grade sports, and timeless Indian values to prepare students for top global universities.
+              </p>
+
+              <!-- Two Working CTAs -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <button type="button" onclick="navigateTo('admissions');" class="px-8 py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-950 font-bold rounded-xl shadow-lg hover:shadow-gold-500/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
+                  <span>Start 2027-28 Application</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+
+                <button type="button" onclick="navigateTo('gallery');" class="px-8 py-3.5 bg-navy-800/80 hover:bg-navy-800 text-white font-semibold rounded-xl border border-navy-600 hover:border-gold-400 transition-all duration-200 flex items-center justify-center gap-2 text-base backdrop-blur-sm">
+                  <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span>Explore Campus Facilities</span>
+                </button>
+              </div>
+
+              <!-- Quick Highlights list -->
+              <div class="pt-4 flex items-center gap-6 text-xs text-slate-300 flex-wrap">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span>100% CBSE Pass Record</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span>15:1 Student-Teacher Ratio</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span>Air-Conditioned GPS Fleet</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Right: Floating Highlight Glass Card -->
+            <div class="lg:col-span-5">
+              <div class="relative max-w-md mx-auto">
+                <!-- Decorative Glow effect -->
+                <div class="absolute -inset-1.5 bg-gradient-to-r from-gold-500 to-navy-600 rounded-3xl blur-lg opacity-40"></div>
+
+                <div class="relative bg-navy-900/90 border border-gold-400/40 rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl text-slate-200">
+                  <div class="flex items-center justify-between pb-4 border-b border-navy-800">
+                    <div class="flex items-center gap-2">
+                      <div class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
+                      <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Admissions Desk 2027-28</span>
+                    </div>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-navy-800 text-slate-300">Phase 1 Active</span>
+                  </div>
+
+                  <div class="py-5 space-y-4">
+                    <div>
+                      <h2 class="text-xl font-bold text-white font-heading">Limited Seats for Nursery to Grade XI</h2>
+                      <p class="text-xs text-slate-400 mt-1">Interactions & Aptitude Assessments scheduled on upcoming Saturdays.</p>
+                    </div>
+
+                    <div class="bg-navy-950/80 p-3.5 rounded-xl border border-navy-800 space-y-2 text-xs">
+                      <div class="flex justify-between items-center">
+                        <span class="text-slate-400">Merit Scholarship Test:</span>
+                        <span class="text-gold-300 font-semibold">12 Dec 2026</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-slate-400">Campus Interaction Window:</span>
+                        <span class="text-white font-semibold">Mon - Sat (9 AM - 2 PM)</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-slate-400">Fee Concessions:</span>
+                        <span class="text-emerald-400 font-semibold">Available for Siblings & Defense</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pt-2 space-y-3">
+                    <button type="button" onclick="navigateTo('admissions');" class="w-full py-3 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-xl text-sm transition-colors text-center block shadow">
+                      Calculate Annual Fee & Apply
+                    </button>
+                    <button type="button" onclick="navigateTo('contact');" class="w-full py-2.5 bg-navy-800 hover:bg-navy-700 text-slate-200 font-semibold rounded-xl text-xs transition-colors border border-navy-700 text-center block">
+                      Book an In-Person Campus Tour
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY METRICS STRIP (4-COLUMN IMPACT STATS) -->
+      <section class="bg-white border-y border-slate-200 shadow-sm relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
+            
+            <div class="flex flex-col items-center text-center px-4">
+              <span class="text-4xl sm:text-5xl font-extrabold text-navy-800 font-heading tracking-tight">28+</span>
+              <span class="text-sm font-bold text-slate-800 mt-2">Years of Academic Excellence</span>
+              <span class="text-xs text-slate-600 mt-0.5">Empowering leaders since 1998</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center px-4 pt-6 lg:pt-0">
+              <span class="text-4xl sm:text-5xl font-extrabold text-gold-500 font-heading tracking-tight">15:1</span>
+              <span class="text-sm font-bold text-slate-800 mt-2">Student-Teacher Ratio</span>
+              <span class="text-xs text-slate-600 mt-0.5">Individualized pastoral attention</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center px-4 pt-6 lg:pt-0">
+              <span class="text-4xl sm:text-5xl font-extrabold text-navy-800 font-heading tracking-tight">100%</span>
+              <span class="text-sm font-bold text-slate-800 mt-2">CBSE Board Pass Record</span>
+              <span class="text-xs text-slate-600 mt-0.5">88.4% School Aggregate (2026)</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center px-4 pt-6 lg:pt-0">
+              <span class="text-4xl sm:text-5xl font-extrabold text-gold-500 font-heading tracking-tight">18-Acre</span>
+              <span class="text-sm font-bold text-slate-800 mt-2">Green & Smart Campus</span>
+              <span class="text-xs text-slate-600 mt-0.5">Olympic pool, STREAM & AI labs</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PRINCIPAL'S WELCOME MESSAGE -->
+      <section class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-slate-200 shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              
+              <!-- Portrait Photo & Credentials -->
+              <div class="lg:col-span-5 flex flex-col items-center text-center">
+                <div class="relative w-64 h-72 sm:w-72 sm:h-80 rounded-2xl overflow-hidden shadow-xl border-4 border-white ring-4 ring-gold-400/30">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                       alt="Dr. Meera Krishnan, Principal Aurelia Global Academy" 
+                       class="w-full h-full object-cover object-top"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'"/>
+                  <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-transparent p-4 text-white">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gold-400">Principal & Director</span>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <h3 class="text-xl font-bold text-navy-800 font-heading">Dr. Meera Krishnan</h3>
+                  <p class="text-xs text-slate-700 font-medium mt-0.5">Ph.D. in Education • M.Sc. Physics (Gold Medalist)</p>
+                  <p class="text-[11px] text-slate-600">Member, CBSE National Curriculum Advisory Committee</p>
+                </div>
+              </div>
+
+              <!-- Message Body & Signature -->
+              <div class="lg:col-span-7 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-navy-50 text-navy-800 text-xs font-bold uppercase tracking-wider">
+                  Principal's Desk
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-800 font-heading leading-tight">
+                  "Education is not merely preparing for life; it is empowering young minds to shape it."
+                </h2>
+
+                <div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
+                  <p>
+                    At Aurelia Global Academy, we cultivate an ecosystem where every student feels seen, heard, and challenged to exceed their own expectations. Our pedagogy unites CBSE academic rigour with modern NEP 2020 frameworks—fostering inquiry over memorization and empathy over competition.
+                  </p>
+                  <p>
+                    Whether your child is programming machine learning algorithms in our Atal Tinkering Hub, debating global climate treaties in our Model UN chamber, or mastering breaststroke in our Olympic pool, we anchor their pursuits in integrity, resilience, and compassion.
+                  </p>
+                </div>
+
+                <!-- Stylized Signature -->
+                <div class="pt-4 flex items-center justify-between border-t border-slate-100 flex-wrap gap-4">
+                  <div>
+                    <div class="font-serif-signature text-3xl text-navy-800 italic font-bold tracking-wide">
+                      Meera Krishnan
+                    </div>
+                    <span class="text-xs text-slate-700 font-medium">Principal, Aurelia Global Academy</span>
+                  </div>
+
+                  <button type="button" onclick="navigateTo('about');" class="text-xs font-bold text-gold-600 hover:text-gold-700 flex items-center gap-1 group">
+                    <span>Read Full Educational Philosophy</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACADEMIC WINGS OVERVIEW (4-CARD GRID) -->
+      <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+              NEP 2020 Pedagogical Framework
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-800 font-heading mt-3">
+              Comprehensive Academic Wings
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-2">
+              Structured progressive learning from early childhood wonder to senior secondary mastery.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Wing 1: Foundational -->
+            <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-gold-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 bg-navy-800 text-gold-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Ages 3 - 6 Years</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-1">Foundational Wing</h3>
+                <p class="text-xs font-semibold text-slate-500 mb-3">Nursery, LKG, UKG</p>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Sensorial discovery, phonics immersion, play-based numeracy, and fine-motor coordination in nature-inspired classrooms.
+                </p>
+                <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Reggio Emilia & Montessori blend</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Outdoor tactile sand & sensory labs</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>10:1 Nurturing care ratio</li>
+                </ul>
+              </div>
+              <button type="button" onclick="navigateTo('academics');" class="text-xs font-bold text-navy-800 group-hover:text-gold-600 flex items-center gap-1">
+                <span>Curriculum Details</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <!-- Wing 2: Primary -->
+            <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-gold-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 bg-navy-800 text-gold-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Grades I to V</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-1">Preparatory Wing</h3>
+                <p class="text-xs font-semibold text-slate-500 mb-3">Foundational Mastery</p>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Experiential literacy, mental arithmetic, integrated social sciences, and bilingual linguistic confidence.
+                </p>
+                <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Inquiry-based STREAM projects</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Junior coding & Scratch animation</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Compulsory swimming & athletics</li>
+                </ul>
+              </div>
+              <button type="button" onclick="navigateTo('academics');" class="text-xs font-bold text-navy-800 group-hover:text-gold-600 flex items-center gap-1">
+                <span>Curriculum Details</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <!-- Wing 3: Middle School -->
+            <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-gold-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 bg-navy-800 text-gold-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Grades VI to VIII</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-1">Middle School Wing</h3>
+                <p class="text-xs font-semibold text-slate-500 mb-3">Critical Thinking & STEAM</p>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Analytical thinking, Python programming, robotics tinkering, third language mastery (French, German, Sanskrit), and debate.
+                </p>
+                <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Atal Tinkering Lab & IoT sensors</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Inter-school Model UN participation</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Scientific research paper writing</li>
+                </ul>
+              </div>
+              <button type="button" onclick="navigateTo('academics');" class="text-xs font-bold text-navy-800 group-hover:text-gold-600 flex items-center gap-1">
+                <span>Curriculum Details</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <!-- Wing 4: Senior Secondary -->
+            <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-gold-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 bg-navy-800 text-gold-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                </div>
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Grades IX to XII</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-1">Senior Secondary</h3>
+                <p class="text-xs font-semibold text-slate-500 mb-3">Science, Commerce, Arts</p>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Rigorous CBSE board syllabus synchronized with integrated JEE, NEET, CUET, and CLAT preparation modules.
+                </p>
+                <ul class="text-xs text-slate-600 space-y-1.5 mb-6">
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Artificial Intelligence as 6th subject</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Global university career counseling</li>
+                  <li class="flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>Advanced research internships</li>
+                </ul>
+              </div>
+              <button type="button" onclick="navigateTo('academics');" class="text-xs font-bold text-navy-800 group-hover:text-gold-600 flex items-center gap-1">
+                <span>Subject Combinations</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE NOTICE BOARD & UPCOMING EVENTS -->
+      <section class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left 7 Cols: Interactive Notice Board -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Official Dispatches</span>
+                  <h2 class="text-2xl font-extrabold text-navy-800 font-heading">Live Notice Board</h2>
+                </div>
+                
+                <!-- Category Filter Pills -->
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <button type="button" data-category="All" class="notice-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-navy-800 text-white shadow-sm transition-all">All</button>
+                  <button type="button" data-category="Circulars" class="notice-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-300 transition-all">Circulars</button>
+                  <button type="button" data-category="Exams" class="notice-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-300 transition-all">Exams</button>
+                  <button type="button" data-category="Holidays" class="notice-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-gold-300 transition-all">Holidays</button>
+                </div>
+              </div>
+
+              <!-- Notices Dynamic List Container -->
+              <div id="notices-list" class="space-y-3">
+                <!-- Dynamically rendered via data.js -->
+              </div>
+            </div>
+
+            <!-- Right 5 Cols: Upcoming School Events -->
+            <div class="lg:col-span-5 space-y-6">
+              <div class="pb-2 border-b border-slate-200">
+                <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Campus Calendar</span>
+                <h2 class="text-2xl font-extrabold text-navy-800 font-heading">Upcoming Events</h2>
+              </div>
+
+              <!-- Events Dynamic List Container -->
+              <div id="events-list" class="space-y-4">
+                <!-- Dynamically rendered via data.js -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CAMPUS FACILITIES & PARENT TESTIMONIALS -->
+      <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Facilities Showcase Grid -->
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">
+              World-Class Infrastructure
+            </span>
+            <h2 class="text-3xl font-extrabold text-navy-800 font-heading mt-3">
+              18-Acre Campus Facilities
+            </h2>
+            <p class="text-slate-600 text-sm mt-2">
+              Designed to stimulate creativity, athletic excellence, and intellectual curiosity.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            
+            <div class="p-6 bg-slate-50 hover:bg-navy-900 hover:text-white rounded-2xl border border-slate-200 transition-all duration-300 group cursor-pointer" onclick="navigateTo('gallery');">
+              <div class="w-12 h-12 bg-navy-800 text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-900 rounded-xl flex items-center justify-center mb-4 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+              </div>
+              <h3 class="text-base font-bold text-navy-800 group-hover:text-white font-heading">Robotics & AI Lab</h3>
+              <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-2 leading-relaxed">
+                Atal Tinkering Lab equipped with 3D printers, IoT kits, drone simulation rigs, and NVIDIA computing hardware.
+              </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 hover:bg-navy-900 hover:text-white rounded-2xl border border-slate-200 transition-all duration-300 group cursor-pointer" onclick="navigateTo('gallery');">
+              <div class="w-12 h-12 bg-navy-800 text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-900 rounded-xl flex items-center justify-center mb-4 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3 class="text-base font-bold text-navy-800 group-hover:text-white font-heading">Olympic Swimming Pool</h3>
+              <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-2 leading-relaxed">
+                50-meter 8-lane all-weather heated pool with ozone purification and FINA-certified coaching personnel.
+              </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 hover:bg-navy-900 hover:text-white rounded-2xl border border-slate-200 transition-all duration-300 group cursor-pointer" onclick="navigateTo('gallery');">
+              <div class="w-12 h-12 bg-navy-800 text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-900 rounded-xl flex items-center justify-center mb-4 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <h3 class="text-base font-bold text-navy-800 group-hover:text-white font-heading">Digital Resource Library</h3>
+              <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-2 leading-relaxed">
+                40,000+ curated volumes, Kindle e-reading stations, JSTOR academic access, and individual study carrels.
+              </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 hover:bg-navy-900 hover:text-white rounded-2xl border border-slate-200 transition-all duration-300 group cursor-pointer" onclick="navigateTo('gallery');">
+              <div class="w-12 h-12 bg-navy-800 text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-900 rounded-xl flex items-center justify-center mb-4 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <h3 class="text-base font-bold text-navy-800 group-hover:text-white font-heading">Smart Glass Classrooms</h3>
+              <p class="text-xs text-slate-600 group-hover:text-slate-300 mt-2 leading-relaxed">
+                Acoustically engineered air-conditioned spaces with 75" 4K interactive panels and ergonomic modular seating.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- PARENT TESTIMONIALS CAROUSEL -->
+          <div class="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-navy-700">
+            <!-- Decorative Quotes watermark -->
+            <div class="absolute right-6 top-6 text-navy-800/50 pointer-events-none select-none text-9xl font-serif">“</div>
+
+            <div class="relative z-10 max-w-4xl mx-auto">
+              <div class="flex items-center justify-between mb-8">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Voices of Trust</span>
+                  <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">What Our Parents Say</h3>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex items-center gap-2">
+                  <button type="button" id="testimonial-prev" aria-label="Previous Testimonial" class="p-2.5 rounded-full bg-navy-800 hover:bg-gold-500 hover:text-navy-950 transition-colors border border-navy-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                  </button>
+                  <button type="button" id="testimonial-next" aria-label="Next Testimonial" class="p-2.5 rounded-full bg-navy-800 hover:bg-gold-500 hover:text-navy-950 transition-colors border border-navy-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Testimonial Content Dynamic Container -->
+              <div class="min-h-[140px] flex flex-col justify-center">
+                <p id="testimonial-quote" class="text-base sm:text-xl text-slate-200 italic leading-relaxed font-light">
+                  <!-- Dynamically populated via JS -->
+                </p>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-navy-700/80 flex items-center justify-between flex-wrap gap-4">
+                <div class="flex items-center gap-4">
+                  <img id="testimonial-avatar" src="" alt="Parent" class="w-14 h-14 rounded-full object-cover border-2 border-gold-400 shadow"/>
+                  <div>
+                    <h4 id="testimonial-author" class="text-base font-bold text-white font-heading"></h4>
+                    <p id="testimonial-designation" class="text-xs text-gold-400 font-medium"></p>
+                    <p id="testimonial-parentof" class="text-xs text-slate-400"></p>
+                  </div>
+                </div>
+
+                <!-- Indicator dots -->
+                <div id="testimonial-dots" class="flex items-center gap-2"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- QUICK ADMISSION CTA STRIP -->
+      <section class="bg-gradient-to-r from-gold-500 via-gold-600 to-amber-600 text-navy-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-center md:text-left">
+            <h2 class="text-2xl sm:text-3xl font-extrabold font-heading tracking-tight text-navy-950">
+              Ready to Give Your Child the Aurelia Advantage?
+            </h2>
+            <p class="text-sm text-navy-900 font-medium mt-1">
+              Admissions now underway for Session 2027-28 across Pre-Primary to Grade XI.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button type="button" onclick="navigateTo('admissions');" class="px-6 py-3 bg-navy-950 hover:bg-navy-900 text-white font-bold rounded-xl text-sm shadow-lg transition-transform transform hover:-translate-y-0.5">
+              Apply Online Now
+            </button>
+            <button type="button" onclick="navigateTo('contact');" class="px-5 py-3 bg-white/80 hover:bg-white text-navy-950 font-bold rounded-xl text-sm transition-colors">
+              Schedule Campus Visit
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- End Home View -->
+
+
+    <!-- ======================================================================
+         VIEW 2: ABOUT US VIEW
+         ====================================================================== -->
+    <div id="view-about" class="spa-view hidden">
+      <div class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Our Legacy & Philosophy</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading mt-2">About Aurelia Global Academy</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-3">
+            Founded in 1998, Aurelia has nurtured over 12,000 alumni who lead with intellect, purpose, and compassionate leadership across the globe.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- Vision & Mission Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+            <div class="w-12 h-12 bg-navy-800 text-gold-400 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-navy-800 font-heading mb-3">Our Vision</h2>
+            <p class="text-sm text-slate-700 leading-relaxed font-normal">
+              To be a beacon of transformative education in India where scientific inquiry and timeless humanist ethics converge, inspiring students to lead sustainable, purposeful, and globally meaningful lives.
+            </p>
+          </div>
+
+          <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+            <div class="w-12 h-12 bg-navy-800 text-gold-400 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-navy-800 font-heading mb-3">Our Mission</h2>
+            <p class="text-sm text-slate-700 leading-relaxed font-normal">
+              To provide child-centric experiential learning aligned with CBSE and NEP 2020 standards, cultivating critical thinking, emotional intelligence, athletic stamina, and an unwavering commitment to societal well-being.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Core Pillars -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600">The Aurelia Ethos</span>
+            <h2 class="text-3xl font-extrabold text-navy-800 font-heading mt-2">Our Four Foundational Pillars</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm text-center">
+              <span class="text-3xl font-black text-gold-500 font-heading">01</span>
+              <h3 class="text-base font-bold text-navy-800 mt-2">Intellectual Rigour</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">Encouraging curiosity over conformity, deep conceptual comprehension, and research-minded inquiry.</p>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm text-center">
+              <span class="text-3xl font-black text-gold-500 font-heading">02</span>
+              <h3 class="text-base font-bold text-navy-800 mt-2">Ethical Leadership</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">Instilling transparency, moral courage, empathy, and active civic participation in community upliftment.</p>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm text-center">
+              <span class="text-3xl font-black text-gold-500 font-heading">03</span>
+              <h3 class="text-base font-bold text-navy-800 mt-2">Global Competence</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">Multilingual proficiency, intercultural fluency, Model UN leadership, and environmental stewardship.</p>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm text-center">
+              <span class="text-3xl font-black text-gold-500 font-heading">04</span>
+              <h3 class="text-base font-bold text-navy-800 mt-2">Holistic Wellness</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">Dedicated sports academies, mindfulness guidance, nutrition hygiene, and emotional resilience counseling.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leadership Team -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Academic Leadership</span>
+            <h2 class="text-3xl font-extrabold text-navy-800 font-heading mt-2">Guided by Visionary Educators</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm text-center p-4">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Dr. Meera Krishnan" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gold-400"/>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Dr. Meera Krishnan</h3>
+              <p class="text-xs text-gold-600 font-semibold">Principal & Academic Director</p>
+              <p class="text-[11px] text-slate-500 mt-1">Ph.D. Education, 26+ Years Experience</p>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm text-center p-4">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Prof. Harish Vardhan" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gold-400"/>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Prof. Harish Vardhan</h3>
+              <p class="text-xs text-gold-600 font-semibold">Chairman, Advisory Council</p>
+              <p class="text-[11px] text-slate-500 mt-1">Former Dean, Faculty of Education</p>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm text-center p-4">
+              <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=400&q=80" alt="Mrs. Shweta Banerjee" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gold-400"/>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Mrs. Shweta Banerjee</h3>
+              <p class="text-xs text-gold-600 font-semibold">Vice Principal (Senior Wing)</p>
+              <p class="text-[11px] text-slate-500 mt-1">M.A., B.Ed., CBSE Resource Person</p>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm text-center p-4">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Mr. Anand Sengupta" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gold-400"/>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Mr. Anand Sengupta</h3>
+              <p class="text-xs text-gold-600 font-semibold">Head of Innovation & STEM</p>
+              <p class="text-[11px] text-slate-500 mt-1">B.Tech IIT Roorkee, Robotics Mentor</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div><!-- End About View -->
+
+
+    <!-- ======================================================================
+         VIEW 3: ACADEMICS VIEW
+         ====================================================================== -->
+    <div id="view-academics" class="spa-view hidden">
+      <div class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-400">CBSE Curriculum & NEP 2020</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading mt-2">Academic Excellence</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-3">
+            Our dual focus combines Board examination mastery with analytical thinking, creative expression, and high-tech STEM readiness.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- Senior Secondary Streams Table -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Class XI & XII Baskets</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-800 font-heading mt-2">Senior Secondary Subject Choices</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Science -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-navy-800 shadow-sm flex flex-col justify-between">
+              <div>
+                <span class="px-3 py-1 bg-navy-800 text-white text-xs font-bold rounded-full">Science Stream</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-3">Medical & Non-Medical</h3>
+                <p class="text-xs text-slate-600 mt-1 mb-4">Integrated with JEE Main/Advanced, NEET, and Olympiad coaching.</p>
+                <div class="space-y-2 text-xs text-slate-700">
+                  <div class="p-2 bg-slate-50 rounded"><strong>Core:</strong> English Core, Physics, Chemistry</div>
+                  <div class="p-2 bg-slate-50 rounded"><strong>Elective 1:</strong> Mathematics or Biology</div>
+                  <div class="p-2 bg-slate-50 rounded"><strong>Elective 2:</strong> Computer Science, AI, Physical Ed, Economics, Psychology</div>
+                </div>
+              </div>
+              <button type="button" onclick="navigateTo('admissions');" class="mt-6 w-full py-2 bg-navy-50 text-navy-800 hover:bg-gold-500 hover:text-white rounded-lg text-xs font-bold transition-colors">Enquire for Grade XI Science</button>
+            </div>
+
+            <!-- Commerce -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-gold-400 shadow-sm flex flex-col justify-between">
+              <div>
+                <span class="px-3 py-1 bg-gold-500 text-navy-950 text-xs font-bold rounded-full">Commerce Stream</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-3">Business & Finance</h3>
+                <p class="text-xs text-slate-600 mt-1 mb-4">Focus on chartered accountancy foundations, fintech, and CUET.</p>
+                <div class="space-y-2 text-xs text-slate-700">
+                  <div class="p-2 bg-slate-50 rounded"><strong>Core:</strong> English Core, Accountancy, Business Studies</div>
+                  <div class="p-2 bg-slate-50 rounded"><strong>Elective 1:</strong> Economics or Applied Mathematics</div>
+                  <div class="p-2 bg-slate-50 rounded"><strong>Elective 2:</strong> Informatics Practices, Entrepreneurship, Fine Arts</div>
+                </div>
+              </div>
+              <button type="button" onclick="navigateTo('admissions');" class="mt-6 w-full py-2 bg-gold-50 text-navy-800 hover:bg-gold-500 hover:text-white rounded-lg text-xs font-bold transition-colors">Enquire for Grade XI Commerce</button>
+            </div>
+
+            <!-- Humanities -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-slate-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <span class="px-3 py-1 bg-slate-800 text-white text-xs font-bold rounded-full">Humanities Stream</span>
+                <h3 class="text-lg font-bold text-navy-800 font-heading mt-3">Liberal Arts & Law</h3>
+                <p class="text-xs text-slate-600 mt-1 mb-4">Focused preparation for CLAT, civil services, design, and journalism.</p>
+                <div class="space-y-2 text-xs text-slate-700">
+                  <div class="p-2 bg-slate-50 rounded"><strong>Core:</strong> English Core, Political Science, History</div>
+                  <div class="p-2 bg-slate-50 rounded"><strong>Elective 1:</strong> Psychology or Sociology</div>
+                  <div class="p-2 bg-slate-50 rounded"><strong>Elective 2:</strong> Legal Studies, Economics, Mass Media, Hindi Core</div>
+                </div>
+              </div>
+              <button type="button" onclick="navigateTo('admissions');" class="mt-6 w-full py-2 bg-slate-100 text-navy-800 hover:bg-gold-500 hover:text-white rounded-lg text-xs font-bold transition-colors">Enquire for Grade XI Humanities</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STREAM & AI Innovation -->
+        <div class="bg-navy-950 text-white rounded-3xl p-8 sm:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Next-Gen Learning</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold font-heading mt-2">STREAM & AI Curriculum</h2>
+              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                Aurelia is one of the few schools in NCR with an official Atal Innovation Mission hub and NVIDIA AI learning modules starting from Grade VI. Students build real-world IoT solutions, learn Python syntax, and interact with machine vision tools.
+              </p>
+              <div class="grid grid-cols-2 gap-4 mt-6 text-xs">
+                <div class="p-3 bg-navy-900 rounded-lg border border-navy-800">
+                  <span class="text-gold-400 font-bold block">3D Prototyping</span>
+                  <span class="text-slate-400">Dual extrusion FDM printers for CAD models</span>
+                </div>
+                <div class="p-3 bg-navy-900 rounded-lg border border-navy-800">
+                  <span class="text-gold-400 font-bold block">Python & ML</span>
+                  <span class="text-slate-400">Algorithmic thinking and data science</span>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="STREAM Lab" class="w-full h-72 object-cover"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- End Academics View -->
+
+
+    <!-- ======================================================================
+         VIEW 4: ADMISSIONS VIEW (INTERACTIVE TOOLS & FEE ESTIMATOR)
+         ====================================================================== -->
+    <div id="view-admissions" class="spa-view hidden">
+      <div class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Academic Session 2027-28</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading mt-2">Admissions & Fee Transparency</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-3">
+            Simple 4-step admission process, transparent annual fee estimator in Indian Rupees (₹), and instant online application enquiry.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- 4-STEP ADMISSION PROCESS TIMELINE -->
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Roadmap to Enrolment</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-800 font-heading mt-1">4-Step Admission Process</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 relative">
+              <span class="w-8 h-8 rounded-full bg-navy-800 text-gold-400 font-bold text-xs flex items-center justify-center mb-4">1</span>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Online Registration</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Submit the online enquiry form below or visit the admissions office to register for the candidate reference ID.
+              </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 relative">
+              <span class="w-8 h-8 rounded-full bg-navy-800 text-gold-400 font-bold text-xs flex items-center justify-center mb-4">2</span>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Campus Interaction</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Informal interaction for Pre-Primary; written diagnostic assessment in English, Math & Science for Grades I to XI.
+              </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 relative">
+              <span class="w-8 h-8 rounded-full bg-navy-800 text-gold-400 font-bold text-xs flex items-center justify-center mb-4">3</span>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Document Verification</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Verification of child's birth certificate, previous school report cards, Transfer Certificate (TC), and residence proof.
+              </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 relative">
+              <span class="w-8 h-8 rounded-full bg-gold-500 text-navy-950 font-bold text-xs flex items-center justify-center mb-4">4</span>
+              <h3 class="text-base font-bold text-navy-800 font-heading">Seat Offer & Fee Deposit</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Formal admission offer letter issued via email; admission confirmed upon deposit of first quarter fee.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- INTERACTIVE ANNUAL FEE ESTIMATOR (INR) -->
+        <div class="bg-gradient-to-br from-navy-900 to-navy-950 text-white rounded-3xl p-6 sm:p-10 border border-navy-700 shadow-2xl">
+          <div class="max-w-3xl mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Interactive Calculator</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-1">Annual Fee Estimator (2027-28)</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">
+              Select student grade level, transport zone, and optional enrichment activities to see real-time annual and quarterly fee calculations.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Controls (Left 7 Cols) -->
+            <div class="lg:col-span-7 space-y-5 bg-navy-800/80 p-6 rounded-2xl border border-navy-700">
+              
+              <!-- Grade Selection -->
+              <div>
+                <label for="calc-grade" class="block text-xs font-bold text-slate-200 mb-2">Select Grade Level</label>
+                <select id="calc-grade" class="w-full bg-navy-950 border border-navy-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                  <option value="nursery">Foundational: Nursery & Kindergarten</option>
+                  <option value="primary" selected>Preparatory / Primary: Grades I to V</option>
+                  <option value="middle">Middle School: Grades VI to VIII</option>
+                  <option value="secondary">Secondary Wing: Grades IX & X</option>
+                  <option value="senior_science">Senior Secondary: Class XI-XII (Science)</option>
+                  <option value="senior_commerce_hum">Senior Secondary: Class XI-XII (Commerce / Humanities)</option>
+                </select>
+              </div>
+
+              <!-- Transport Zone -->
+              <div>
+                <label for="calc-transport" class="block text-xs font-bold text-slate-200 mb-2">GPS Bus Transport Zone</label>
+                <select id="calc-transport" class="w-full bg-navy-950 border border-navy-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                  <option value="none">No School Transport (Self Drop & Pickup)</option>
+                  <option value="zone1" selected>Zone 1 (0 to 5 km) - Sec 54-57, Golf Course Rd (₹ 38,000/yr)</option>
+                  <option value="zone2">Zone 2 (5 to 10 km) - Sohna Rd, DLF Phase 1-5, Nirvana (₹ 48,000/yr)</option>
+                  <option value="zone3">Zone 3 (10 to 18 km) - Cyber Hub, MG Rd, Dwarka Expwy (₹ 62,000/yr)</option>
+                </select>
+              </div>
+
+              <!-- Optional Add-ons -->
+              <div class="pt-2 border-t border-navy-700 space-y-3">
+                <span class="block text-xs font-bold text-gold-400">Optional Campus Programs</span>
+                
+                <label class="flex items-center gap-3 cursor-pointer select-none">
+                  <input type="checkbox" id="calc-meal" class="w-4 h-4 rounded text-gold-500 focus:ring-gold-400 bg-navy-950 border-navy-600"/>
+                  <span class="text-xs text-slate-300">Organic Hot Lunch & Snack Plan (+₹ 32,000 / year)</span>
+                </label>
+
+                <label class="flex items-center gap-3 cursor-pointer select-none">
+                  <input type="checkbox" id="calc-sports" class="w-4 h-4 rounded text-gold-500 focus:ring-gold-400 bg-navy-950 border-navy-600"/>
+                  <span class="text-xs text-slate-300">After-School Sports Academy (Swimming/Tennis/Cricket) (+₹ 24,000 / year)</span>
+                </label>
+              </div>
+
+            </div>
+
+            <!-- Calculated Breakdown (Right 5 Cols) -->
+            <div class="lg:col-span-5 bg-navy-950 p-6 rounded-2xl border border-gold-400/40 shadow-xl space-y-4">
+              <h3 class="text-base font-bold text-white font-heading pb-3 border-b border-navy-800 flex items-center justify-between">
+                <span>Fee Summary Breakdown</span>
+                <span class="text-xs text-gold-400 font-mono">INR (₹)</span>
+              </h3>
+
+              <div class="space-y-2.5 text-xs">
+                <div class="flex justify-between text-slate-300">
+                  <span>Annual Tuition Fee:</span>
+                  <span id="fee-tuition" class="font-bold text-white font-mono">₹ 1,55,000</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Development & IT Infrastructure:</span>
+                  <span id="fee-development" class="font-bold text-white font-mono">₹ 28,000</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Co-Curricular & Labs:</span>
+                  <span id="fee-activity" class="font-bold text-white font-mono">₹ 18,000</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>GPS Transport Fee:</span>
+                  <span id="fee-transport" class="font-bold text-white font-mono">₹ 38,000</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span>Optional Programs:</span>
+                  <span id="fee-addons" class="font-bold text-white font-mono">₹ 0</span>
+                </div>
+              </div>
+
+              <!-- Totals -->
+              <div class="pt-4 border-t-2 border-navy-800 space-y-2">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs uppercase font-bold text-slate-400">Total Annual Payable:</span>
+                  <span id="fee-total-annual" class="text-2xl font-extrabold text-gold-400 font-mono">₹ 2,39,000</span>
+                </div>
+                <div class="flex justify-between items-baseline text-xs text-slate-400">
+                  <span>Quarterly Installment (x 4):</span>
+                  <span id="fee-quarterly" class="font-bold text-emerald-400 font-mono text-sm">₹ 59,750 / qtr</span>
+                </div>
+                <div class="flex justify-between items-baseline text-[11px] text-slate-400 pt-1">
+                  <span>One-time Admission Fee (New Adm):</span>
+                  <span id="fee-admission-onetime" class="font-mono text-slate-200">₹ 45,000</span>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button type="button" id="apply-with-estimate-btn" class="w-full py-3 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-navy-950 font-bold rounded-xl text-xs transition-all shadow-md">
+                  Apply with this Estimated Plan
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WORKING ONLINE ADMISSION ENQUIRY FORM -->
+        <div id="admission-form-card" class="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200 shadow-sm">
+          <div class="max-w-2xl mx-auto text-center mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-600">Online Enrolment</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-800 font-heading mt-1">Admission Enquiry Form 2027-28</h2>
+            <p class="text-slate-600 text-xs sm:text-sm mt-1">
+              Fill in your child's particulars to receive a confirmed Application Reference ID and schedule a campus meeting.
+            </p>
+          </div>
+
+          <form id="admission-enquiry-form" class="max-w-4xl mx-auto space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Student Full Name -->
+              <div>
+                <label for="enquiry-student-name" class="block text-xs font-bold text-slate-700 mb-1.5">Student Full Name *</label>
+                <input type="text" id="enquiry-student-name" required placeholder="e.g. Aarav Sharma" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"/>
+              </div>
+
+              <!-- Date of Birth -->
+              <div>
+                <label for="enquiry-dob" class="block text-xs font-bold text-slate-700 mb-1.5">Date of Birth *</label>
+                <input type="date" id="enquiry-dob" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"/>
+              </div>
+
+              <!-- Grade Applying For -->
+              <div>
+                <label for="enquiry-grade" class="block text-xs font-bold text-slate-700 mb-1.5">Grade Applying For *</label>
+                <select id="enquiry-grade" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all">
+                  <option value="">Select Grade</option>
+                  <option value="nursery">Foundational: Nursery / KG</option>
+                  <option value="primary">Grades I to V</option>
+                  <option value="middle">Grades VI to VIII</option>
+                  <option value="secondary">Grades IX & X</option>
+                  <option value="senior_science">Grade XI - Science Stream</option>
+                  <option value="senior_commerce_hum">Grade XI - Commerce / Humanities</option>
+                </select>
+              </div>
+
+              <!-- Parent / Guardian Name -->
+              <div>
+                <label for="enquiry-parent-name" class="block text-xs font-bold text-slate-700 mb-1.5">Parent / Guardian Full Name *</label>
+                <input type="text" id="enquiry-parent-name" required placeholder="e.g. Dr. Vikramaditya Sharma" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"/>
+              </div>
+
+              <!-- Parent Mobile Number -->
+              <div>
+                <label for="enquiry-mobile" class="block text-xs font-bold text-slate-700 mb-1.5">Parent Mobile Number (10 digits) *</label>
+                <div class="relative">
+                  <span class="absolute left-3.5 top-2.5 text-xs font-bold text-slate-500">+91</span>
+                  <input type="tel" id="enquiry-mobile" required maxlength="10" placeholder="9810244321" class="w-full pl-12 pr-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"/>
+                </div>
+              </div>
+
+              <!-- Parent Email Address -->
+              <div>
+                <label for="enquiry-email" class="block text-xs font-bold text-slate-700 mb-1.5">Parent Email Address *</label>
+                <input type="email" id="enquiry-email" required placeholder="parent@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"/>
+              </div>
+
+              <!-- Location / Sector -->
+              <div class="md:col-span-2">
+                <label for="enquiry-area" class="block text-xs font-bold text-slate-700 mb-1.5">Residential Sector / Area in Gurugram / NCR</label>
+                <input type="text" id="enquiry-area" placeholder="e.g. Sector 54, Golf Course Road, Gurugram" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"/>
+              </div>
+
+              <!-- Specific Questions -->
+              <div class="md:col-span-2">
+                <label for="enquiry-comments" class="block text-xs font-bold text-slate-700 mb-1.5">Any Specific Questions / Medical Needs / Sibling Details</label>
+                <textarea id="enquiry-comments" rows="3" placeholder="Tell us about your child's interests or questions regarding admission..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-navy-800 transition-all"></textarea>
+              </div>
+
+            </div>
+
+            <div class="text-center pt-2">
+              <button type="submit" class="px-10 py-3.5 bg-navy-800 hover:bg-gold-500 hover:text-navy-950 text-white font-bold rounded-xl text-sm transition-all duration-200 shadow-md transform hover:-translate-y-0.5">
+                Submit Online Admission Enquiry
+              </button>
+              <p class="text-[11px] text-slate-500 mt-2">
+                Our Admissions Team will contact you within 24 business hours to arrange the campus interaction.
+              </p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div><!-- End Admissions View -->
+
+
+    <!-- ======================================================================
+         VIEW 5: CAMPUS & FILTERABLE GALLERY VIEW
+         ====================================================================== -->
+    <div id="view-gallery" class="spa-view hidden">
+      <div class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Visual Experience</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading mt-2">Campus & Photo Gallery</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-3">
+            Explore our state-of-the-art facilities, laboratories, sporting complexes, and vibrant cultural events.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+        
+        <!-- Category Filter Pills -->
+        <div class="flex items-center justify-center gap-2 flex-wrap pb-4">
+          <button type="button" data-filter="all" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-navy-800 text-white shadow transition-all">All Photos</button>
+          <button type="button" data-filter="academics" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Academics & Classrooms</button>
+          <button type="button" data-filter="stem" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">STEM & Robotics Labs</button>
+          <button type="button" data-filter="sports" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Sports & Athletics</button>
+          <button type="button" data-filter="cultural" class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Cultural & Arts</button>
+        </div>
+
+        <!-- Gallery Grid Dynamic Container -->
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically populated via data.js -->
+        </div>
+
+      </div>
+    </div><!-- End Gallery View -->
+
+
+    <!-- ======================================================================
+         VIEW 6: CBSE MANDATORY PUBLIC DISCLOSURE VIEW
+         ====================================================================== -->
+    <div id="view-disclosure" class="spa-view hidden">
+      <div class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center gap-2 text-xs font-semibold text-gold-400 uppercase tracking-wider">
+            <span>Regulatory Compliance</span>
+            <span>•</span>
+            <span>Appendix-IX Norms</span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading mt-2">Mandatory Public Disclosure</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-3">
+            In compliance with CBSE Circular No. 03/2021, Aurelia Global Academy makes all statutory statutory certificates, academic results, and trust documentation publicly available.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+        
+        <!-- Section A: General Information -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-navy-800 text-white px-6 py-4">
+            <h2 class="text-base font-bold font-heading">Section A: General Information</h2>
+          </div>
+          <div class="p-6">
+            <table class="w-full text-xs text-left">
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800 w-1/3">Name of the School</td><td class="py-2.5 text-slate-700">Aurelia Global Academy</td></tr>
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800">Affiliation Number</td><td class="py-2.5 font-mono font-bold text-navy-800">531849</td></tr>
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800">School Code</td><td class="py-2.5 font-mono font-bold text-navy-800">41822</td></tr>
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800">Complete Address with PIN Code</td><td class="py-2.5 text-slate-700">Sector 57, Golf Course Extension Road, Gurugram, Haryana - 122003</td></tr>
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800">Principal Name & Qualification</td><td class="py-2.5 text-slate-700">Dr. Meera Krishnan, Ph.D. (Education), M.Sc. Physics (Gold Medalist)</td></tr>
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800">School Email ID</td><td class="py-2.5 text-slate-700">admissions@aureliaglobal.edu.in / info@aureliaglobal.edu.in</td></tr>
+                <tr class="hover:bg-slate-50"><td class="py-2.5 font-bold text-slate-800">Contact Telephone Numbers</td><td class="py-2.5 text-slate-700">+91 124 482 9100 / +91 98102 44321</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section B: Documents and Information (Interactive Preview) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-navy-800 text-white px-6 py-4 flex justify-between items-center">
+            <h2 class="text-base font-bold font-heading">Section B: Documents and Information</h2>
+            <span class="text-xs text-gold-400 font-semibold">Click 'View Document' to inspect certified copies</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                <tr>
+                  <th class="px-4 py-3 text-center">S.No.</th>
+                  <th class="px-4 py-3">Document Title</th>
+                  <th class="px-4 py-3">Issuing Authority</th>
+                  <th class="px-4 py-3">Order / Memo No.</th>
+                  <th class="px-4 py-3">Validity</th>
+                  <th class="px-4 py-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="disclosure-documents-tbody" class="divide-y divide-slate-100">
+                <!-- Dynamically populated via data.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section C: Results & Academic Metrics -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="bg-navy-800 text-white px-6 py-4">
+            <h2 class="text-base font-bold font-heading">Section C: Last 3-Year CBSE Board Examination Results</h2>
+          </div>
+          <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Class X -->
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 class="text-sm font-bold text-navy-800 mb-3">Class X (All India Secondary School Exam)</h3>
+                <table class="w-full text-xs">
+                  <thead class="text-slate-500 border-b border-slate-200">
+                    <tr><th class="pb-1 text-left">Year</th><th class="pb-1 text-center">Registered</th><th class="pb-1 text-center">Passed</th><th class="pb-1 text-right">Pass %</th></tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-1.5 font-medium">2023-24</td><td class="py-1.5 text-center">148</td><td class="py-1.5 text-center">148</td><td class="py-1.5 text-right font-bold text-emerald-700">100%</td></tr>
+                    <tr><td class="py-1.5 font-medium">2024-25</td><td class="py-1.5 text-center">162</td><td class="py-1.5 text-center">162</td><td class="py-1.5 text-right font-bold text-emerald-700">100%</td></tr>
+                    <tr><td class="py-1.5 font-medium">2025-26</td><td class="py-1.5 text-center">174</td><td class="py-1.5 text-center">174</td><td class="py-1.5 text-right font-bold text-emerald-700">100%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Class XII -->
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 class="text-sm font-bold text-navy-800 mb-3">Class XII (All India Senior School Certificate Exam)</h3>
+                <table class="w-full text-xs">
+                  <thead class="text-slate-500 border-b border-slate-200">
+                    <tr><th class="pb-1 text-left">Year</th><th class="pb-1 text-center">Registered</th><th class="pb-1 text-center">Passed</th><th class="pb-1 text-right">Pass %</th></tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-1.5 font-medium">2023-24</td><td class="py-1.5 text-center">126</td><td class="py-1.5 text-center">126</td><td class="py-1.5 text-right font-bold text-emerald-700">100%</td></tr>
+                    <tr><td class="py-1.5 font-medium">2024-25</td><td class="py-1.5 text-center">138</td><td class="py-1.5 text-center">138</td><td class="py-1.5 text-right font-bold text-emerald-700">100%</td></tr>
+                    <tr><td class="py-1.5 font-medium">2025-26</td><td class="py-1.5 text-center">152</td><td class="py-1.5 text-center">152</td><td class="py-1.5 text-right font-bold text-emerald-700">100%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- End Disclosure View -->
+
+
+    <!-- ======================================================================
+         VIEW 7: CONTACT VIEW & TOUR BOOKING
+         ====================================================================== -->
+    <div id="view-contact" class="spa-view hidden">
+      <div class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Visit Gurugram Campus</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold font-heading mt-2">Connect With Us</h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-3">
+            Schedule an in-person campus tour, speak with an admissions counselor, or find administrative office timings.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Info & Map Card (Left 5 Cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+              <h2 class="text-lg font-bold text-navy-800 font-heading">Campus Address</h2>
+              <div class="flex items-start gap-3 text-xs text-slate-700">
+                <svg class="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <div>
+                  <p class="font-bold text-slate-900">Aurelia Global Academy</p>
+                  <p>Sector 57, Golf Course Extension Road,</p>
+                  <p>Gurugram, Haryana - 122003, India</p>
+                  <p class="text-slate-500 mt-1">Landmark: Near Hong Kong Bazaar & Rapid Metro Sec 56</p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-200 space-y-2 text-xs">
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  <span><strong>Admissions:</strong> +91 124 482 9100</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                  <span><strong>Transport Desk:</strong> +91 98102 44321</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span><strong>Email:</strong> admissions@aureliaglobal.edu.in</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simulated Map Card -->
+            <div class="p-4 bg-navy-950 text-white rounded-2xl border border-navy-800">
+              <div class="flex items-center justify-between mb-3 text-xs">
+                <span class="font-bold text-gold-400">Campus Route & Metro Connectivity</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-900 text-emerald-300 text-[10px]">Open for Visits</span>
+              </div>
+              <div class="h-44 bg-navy-900 rounded-xl relative overflow-hidden border border-navy-800 flex items-center justify-center text-center p-4">
+                <!-- Visual Map graphic -->
+                <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D99B26_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="relative z-10">
+                  <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-950 mx-auto flex items-center justify-center font-bold mb-1 shadow-lg animate-bounce">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <p class="text-xs font-bold text-white">Sector 57, Gurugram</p>
+                  <p class="text-[11px] text-slate-400">8 mins from Sector 55-56 Rapid Metro Station</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Working Campus Tour Appointment Scheduler (Right 7 Cols) -->
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
+            <h2 class="text-xl font-bold text-navy-800 font-heading mb-2">Book an In-Person Campus Tour</h2>
+            <p class="text-xs text-slate-600 mb-6">
+              Select your preferred date and time slot. Our Admissions Director personally conducts tours for prospective families.
+            </p>
+
+            <form id="tour-booking-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="tour-name" class="block text-xs font-bold text-slate-700 mb-1">Parent Full Name *</label>
+                  <input type="text" id="tour-name" required placeholder="e.g. Ananya Mehra" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"/>
+                </div>
+
+                <div>
+                  <label for="tour-phone" class="block text-xs font-bold text-slate-700 mb-1">Mobile Number *</label>
+                  <input type="tel" id="tour-phone" required placeholder="10-digit number" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"/>
+                </div>
+
+                <div>
+                  <label for="tour-date" class="block text-xs font-bold text-slate-700 mb-1">Preferred Date *</label>
+                  <input type="date" id="tour-date" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"/>
+                </div>
+
+                <div>
+                  <label for="tour-slot" class="block text-xs font-bold text-slate-700 mb-1">Preferred Time Slot *</label>
+                  <select id="tour-slot" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                    <option value="Morning Slot: 09:30 AM - 10:30 AM">Morning Slot: 09:30 AM - 10:30 AM</option>
+                    <option value="Mid-Day Slot: 11:30 AM - 12:30 PM">Mid-Day Slot: 11:30 AM - 12:30 PM</option>
+                    <option value="Afternoon Slot: 02:00 PM - 03:00 PM">Afternoon Slot: 02:00 PM - 03:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="tour-notes" class="block text-xs font-bold text-slate-700 mb-1">Grades interested in & questions</label>
+                <textarea id="tour-notes" rows="2" placeholder="e.g. Interested in Grade VI STREAM labs and bus transport to Nirvana Country" class="w-full px-3.5 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3 bg-navy-800 hover:bg-gold-500 hover:text-navy-950 text-white font-bold rounded-lg text-xs transition-colors shadow">
+                Confirm Campus Tour Appointment
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- End Contact View -->
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-navy-950 text-white border-t border-navy-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Col 1: School Identity -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path d="M50 4 L88 20 V52 C88 76 50 96 50 96 C50 96 12 76 12 52 V20 L50 4Z" fill="#0F2547" stroke="#D99B26" stroke-width="3"/>
+                <circle cx="50" cy="30" r="10" fill="#D99B26"/>
+                <path d="M34 52 C42 48 48 50 50 54 C52 50 58 48 66 52 V68 C58 64 52 66 50 70 C48 66 42 64 34 68 Z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-bold text-base font-heading">Aurelia Academy</span>
+              <p class="text-[11px] text-gold-400">CBSE Affiliated • Gurugram</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Aurelia Global Academy is an experiential K-12 institution committed to academic rigour, scientific inquiry, and empathetic global citizenship.
+          </p>
+          <p class="text-xs text-slate-400">
+            CBSE Affiliation No: <strong class="text-white">531849</strong><br/>
+            School Code: <strong class="text-white">41822</strong>
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="space-y-3">
+          <h3 class="text-sm font-bold text-gold-400 font-heading uppercase tracking-wider">Quick Navigation</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="#home" onclick="navigateTo('home');" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li><a href="#about" onclick="navigateTo('about');" class="hover:text-gold-400 transition-colors">About Our Leadership</a></li>
+            <li><a href="#academics" onclick="navigateTo('academics');" class="hover:text-gold-400 transition-colors">Curriculum & NEP 2020</a></li>
+            <li><a href="#admissions" onclick="navigateTo('admissions');" class="hover:text-gold-400 transition-colors">Admissions 2027-28</a></li>
+            <li><a href="#gallery" onclick="navigateTo('gallery');" class="hover:text-gold-400 transition-colors">Campus Photo Tour</a></li>
+            <li><a href="#contact" onclick="navigateTo('contact');" class="hover:text-gold-400 transition-colors">Schedule a Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Statutory & Mandatory Disclosure -->
+        <div class="space-y-3">
+          <h3 class="text-sm font-bold text-gold-400 font-heading uppercase tracking-wider">Compliance & ERP</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="#disclosure" onclick="navigateTo('disclosure');" class="hover:text-gold-400 transition-colors flex items-center gap-1 font-semibold text-gold-300">
+              <span>Mandatory Public Disclosure</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a></li>
+            <li><button type="button" class="open-erp-modal-btn text-left hover:text-gold-400 transition-colors">Parent ERP Portal Login</button></li>
+            <li><a href="#admissions" onclick="navigateTo('admissions');" class="hover:text-gold-400 transition-colors">Fee Structure & Transport Norms</a></li>
+            <li><a href="#contact" onclick="navigateTo('contact');" class="hover:text-gold-400 transition-colors">POSH & Child Safety Cell</a></li>
+            <li><a href="#contact" onclick="navigateTo('contact');" class="hover:text-gold-400 transition-colors">Special Educator & Counseling</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Emergency Contact -->
+        <div class="space-y-3">
+          <h3 class="text-sm font-bold text-gold-400 font-heading uppercase tracking-wider">Academic Digest</h3>
+          <p class="text-xs text-slate-400">Subscribe for school circulars, Olympiad notifications, and open house dates.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <input type="email" id="newsletter-email" required placeholder="Enter parent email address" class="w-full px-3 py-2 bg-navy-900 border border-navy-700 rounded-lg text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold-400"/>
+            <button type="submit" class="w-full py-2 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-lg text-xs transition-colors">
+              Subscribe to Circulars
+            </button>
+          </form>
+          <div class="pt-2 text-[11px] text-slate-400">
+            Emergency Desk: <strong class="text-white">+91 124 482 9100</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-navy-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Aurelia Global Academy, Gurugram. All rights reserved. Affiliated to CBSE, New Delhi.</p>
+        <div class="flex items-center gap-4">
+          <span class="hover:text-slate-400 cursor-pointer" onclick="navigateTo('disclosure');">CBSE Bye-laws Compliant</span>
+          <span>•</span>
+          <span class="hover:text-slate-400 cursor-pointer" onclick="navigateTo('contact');">Privacy & Terms</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING ADMISSIONS HELP ASSISTANT (CHATBOT WIDGET)
+       ======================================================================== -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <!-- Chat Toggle Button -->
+    <button type="button" id="chat-toggle-btn" aria-label="Open Admissions Help Assistant" class="p-3.5 bg-gradient-to-r from-navy-800 to-navy-900 hover:from-navy-700 hover:to-navy-800 text-white rounded-full shadow-2xl border-2 border-gold-400 flex items-center gap-2.5 transition-all duration-300 transform hover:scale-105">
+      <div class="relative">
+        <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+        <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full border border-navy-900"></span>
+      </div>
+      <span class="text-xs font-bold tracking-tight pr-1 hidden sm:inline">Admissions Help</span>
+    </button>
+
+    <!-- Chat Window Container -->
+    <div id="chat-window" class="hidden absolute bottom-16 right-0 w-[92vw] sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[520px] transition-all">
+      
+      <!-- Chat Header -->
+      <div class="bg-navy-900 text-white p-4 flex items-center justify-between border-b border-navy-800">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-navy-800 border border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xs">
+            AGA
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white font-heading">Admissions Assistant</h3>
+            <p class="text-[10px] text-emerald-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Live • Aurelia Admissions Desk
+            </p>
+          </div>
+        </div>
+        <button type="button" id="chat-close-btn" aria-label="Close Chat Window" class="text-slate-400 hover:text-white p-1 rounded">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Quick Question Chips -->
+      <div class="bg-slate-50 p-2 border-b border-slate-200 overflow-x-auto flex items-center gap-1.5 no-scrollbar">
+        <button type="button" class="chat-quick-chip px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[11px] font-medium text-slate-700 hover:border-gold-400 hover:text-navy-800 flex-shrink-0 transition-colors" data-question="What are the school timings?">
+          Timings
+        </button>
+        <button type="button" class="chat-quick-chip px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[11px] font-medium text-slate-700 hover:border-gold-400 hover:text-navy-800 flex-shrink-0 transition-colors" data-question="What is the age criteria for Nursery?">
+          Nursery Age
+        </button>
+        <button type="button" class="chat-quick-chip px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[11px] font-medium text-slate-700 hover:border-gold-400 hover:text-navy-800 flex-shrink-0 transition-colors" data-question="Is GPS bus transport available?">
+          Bus Transport
+        </button>
+        <button type="button" class="chat-quick-chip px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[11px] font-medium text-slate-700 hover:border-gold-400 hover:text-navy-800 flex-shrink-0 transition-colors" data-question="How do I book a campus tour?">
+          Campus Tour
+        </button>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div id="chat-messages-container" class="flex-1 p-4 overflow-y-auto bg-slate-100/60 space-y-3">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Chat Input Form -->
+      <form id="chat-form" class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
+        <input type="text" id="chat-input" placeholder="Type your query regarding admissions..." class="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-800"/>
+        <button type="submit" aria-label="Send Message" class="p-2 bg-navy-800 hover:bg-gold-500 hover:text-navy-950 text-white rounded-xl transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODALS SYSTEM
+       ======================================================================== -->
+
+  <!-- 1. OFFICIAL NOTICE / CIRCULAR MODAL -->
+  <div id="notice-modal" class="app-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden animate-scale-up">
+      <div class="p-4 bg-navy-950 text-white flex justify-between items-center border-b border-navy-800">
+        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Aurelia Official Document</span>
+        <button type="button" onclick="closeModal('notice-modal')" class="text-slate-400 hover:text-white p-1 rounded">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      
+      <div id="notice-modal-body" class="p-6 overflow-y-auto flex-1 printable-area">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center no-print">
+        <button type="button" onclick="window.print()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg text-xs flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Print Circular
+        </button>
+        <button type="button" onclick="closeModal('notice-modal')" class="px-4 py-2 bg-navy-800 text-white hover:bg-navy-700 font-semibold rounded-lg text-xs transition-colors">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. GALLERY LIGHTBOX MODAL -->
+  <div id="gallery-lightbox-modal" class="app-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+    <button type="button" onclick="closeModal('gallery-lightbox-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full bg-white/10 transition-colors z-20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Nav buttons -->
+    <button type="button" onclick="prevLightboxImage()" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button type="button" onclick="nextLightboxImage()" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <div class="max-w-4xl w-full flex flex-col items-center">
+      <div class="relative max-h-[70vh] rounded-2xl overflow-hidden shadow-2xl bg-black">
+        <img id="lightbox-img" src="" alt="Gallery Image" class="max-h-[70vh] w-auto object-contain mx-auto"/>
+      </div>
+      <div class="mt-4 text-center max-w-xl text-white">
+        <div class="flex items-center justify-center gap-3 mb-1">
+          <span id="lightbox-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-gold-500 text-navy-950"></span>
+          <span id="lightbox-counter" class="text-xs text-slate-400 font-mono"></span>
+        </div>
+        <h3 id="lightbox-title" class="text-lg font-bold font-heading"></h3>
+        <p id="lightbox-caption" class="text-xs text-slate-300 mt-1 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CBSE DISCLOSURE DOCUMENT PREVIEW MODAL -->
+  <div id="disclosure-doc-modal" class="app-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="p-4 bg-navy-950 text-white flex justify-between items-center">
+        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Certified CBSE Regulatory Document</span>
+        <button type="button" onclick="closeModal('disclosure-doc-modal')" class="text-slate-400 hover:text-white p-1 rounded">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="disclosure-modal-body" class="p-6 overflow-y-auto flex-1 printable-area">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center no-print">
+        <button type="button" onclick="window.print()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg text-xs flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Print Official Copy
+        </button>
+        <button type="button" onclick="closeModal('disclosure-doc-modal')" class="px-4 py-2 bg-navy-800 text-white hover:bg-navy-700 font-semibold rounded-lg text-xs transition-colors">
+          Dismiss
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. PARENT ERP PORTAL MODAL (LOGIN & DEMO DASHBOARD) -->
+  <div id="erp-portal-modal" class="app-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      
+      <!-- ERP Modal Header -->
+      <div class="p-4 sm:p-5 bg-navy-950 text-white flex justify-between items-center border-b border-navy-800">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-navy-800 border border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xs">
+            ERP
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold font-heading">Aurelia Parent ERP Portal</h3>
+            <p class="text-[11px] text-slate-400">Edunext Academic & Fee Management System</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal('erp-portal-modal')" class="text-slate-400 hover:text-white p-1 rounded">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- VIEW A: ERP LOGIN SCREEN -->
+      <div id="erp-login-view" class="p-6 sm:p-10 flex-1 overflow-y-auto">
+        <div class="max-w-md mx-auto space-y-6">
+          <div class="text-center">
+            <span class="px-3 py-1 bg-gold-100 text-gold-800 text-xs font-bold rounded-full uppercase">Demo Access Available</span>
+            <h2 class="text-2xl font-bold text-navy-800 font-heading mt-2">Sign In to Parent Portal</h2>
+            <p class="text-xs text-slate-500 mt-1">Access real-time attendance, quarterly fee ledger, exam marks & teacher remarks.</p>
+          </div>
+
+          <!-- One-Click Fill Demo Credentials Button -->
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs flex items-center justify-between">
+            <div>
+              <span class="font-bold text-amber-900 block">Want to test the parent experience?</span>
+              <span class="text-amber-700 text-[11px]">Click to pre-fill test student (Aarav Sharma, Grade VIII-A)</span>
+            </div>
+            <button type="button" id="erp-demo-fill-btn" class="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg text-xs transition-colors flex-shrink-0">
+              Fill Demo Credentials
+            </button>
+          </div>
+
+          <form id="erp-login-form" class="space-y-4">
+            <div>
+              <label for="erp-username" class="block text-xs font-bold text-slate-700 mb-1">Parent User ID / Admission No *</label>
+              <input type="text" id="erp-username" required placeholder="e.g. aarav.sharma@parent.aga" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"/>
+            </div>
+
+            <div>
+              <label for="erp-password" class="block text-xs font-bold text-slate-700 mb-1">Portal Password *</label>
+              <input type="password" id="erp-password" required placeholder="••••••••" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"/>
+            </div>
+
+            <button type="submit" class="w-full py-3 bg-navy-800 hover:bg-navy-900 text-white font-bold rounded-xl text-xs transition-colors shadow">
+              Sign In to Parent ERP
+            </button>
+          </form>
+
+          <p class="text-[11px] text-center text-slate-400">
+            For password reset or credentials assistance, please contact the IT Helpdesk at <span class="text-slate-600 font-medium">erp-support@aureliaglobal.edu.in</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- VIEW B: ERP DASHBOARD SCREEN (ACTIVE STATE) -->
+      <div id="erp-dashboard-view" class="hidden flex-1 overflow-y-auto p-6 space-y-6">
+        
+        <!-- Student Identity Bar -->
+        <div class="bg-gradient-to-r from-navy-900 to-navy-800 text-white p-5 rounded-2xl border border-navy-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=200&q=80" alt="Student Avatar" class="w-14 h-14 rounded-xl object-cover border-2 border-gold-400 shadow"/>
+            <div>
+              <div class="flex items-center gap-2">
+                <h4 id="erp-stu-name" class="text-lg font-bold font-heading text-white">Aarav Sharma</h4>
+                <span id="erp-stu-grade" class="px-2 py-0.5 rounded text-[10px] font-bold bg-gold-500 text-navy-950">Grade VIII-A</span>
+              </div>
+              <div class="text-xs text-slate-300 mt-0.5 space-x-2">
+                <span>Adm No: <strong id="erp-stu-adm" class="text-white">AGA-2021-1402</strong></span>
+                <span>•</span>
+                <span>Roll No: <strong id="erp-stu-roll" class="text-white">14</strong></span>
+                <span>•</span>
+                <span id="erp-stu-house" class="text-gold-300">Phoenix House</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button type="button" id="erp-logout-btn" class="px-3.5 py-1.5 bg-navy-700 hover:bg-navy-600 text-slate-200 text-xs font-semibold rounded-lg border border-navy-600 transition-colors">
+              Sign Out
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 Quick Stats Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-medium">Year-to-Date Attendance</span>
+            <div id="erp-stu-att" class="text-xl font-extrabold text-emerald-700 mt-1">94.8% (146/154 Days)</div>
+            <span class="text-[11px] text-slate-400">Target > 85% CBSE Minimum</span>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-medium">Mid-Term Academic GPA</span>
+            <div id="erp-stu-gpa" class="text-xl font-extrabold text-navy-800 mt-1">9.4 / 10.0 (Grade A1)</div>
+            <span class="text-[11px] text-slate-400">Rank: 3rd in Section A</span>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-medium">Class Teacher Mentor</span>
+            <div id="erp-stu-mentor" class="text-sm font-bold text-slate-800 mt-1">Mrs. Nidhi Sachdeva</div>
+            <span class="text-[11px] text-slate-400">TGT Mathematics</span>
+          </div>
+        </div>
+
+        <!-- Fee Ledger Section -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+            <h4 class="text-xs font-bold text-navy-800 uppercase tracking-wider">Academic Session 2026-27 Fee Ledger</h4>
+            <span class="text-[11px] text-slate-500">Term 1, 2, 3 Paid • Term 4 Due Jan 15</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 text-slate-500 border-b border-slate-100">
+                <tr>
+                  <th class="py-2.5 px-3">Term / Installment</th>
+                  <th class="py-2.5 px-3">Amount</th>
+                  <th class="py-2.5 px-3">Status</th>
+                  <th class="py-2.5 px-3">Receipt Ref</th>
+                  <th class="py-2.5 px-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="erp-fee-tbody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Academic Report Card (Mid-Term) -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+          <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+            <h4 class="text-xs font-bold text-navy-800 uppercase tracking-wider">Mid-Term Examination Scholastic Scores</h4>
+            <span class="text-[11px] text-emerald-700 font-semibold">Agg: 92.8% (Distinction)</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 text-slate-500 border-b border-slate-100">
+                <tr>
+                  <th class="py-2 px-3">Subject</th>
+                  <th class="py-2 px-3 text-center">Score (Max 100)</th>
+                  <th class="py-2 px-3 text-center">CBSE Grade</th>
+                  <th class="py-2 px-3">Subject Teacher</th>
+                </tr>
+              </thead>
+              <tbody id="erp-grades-tbody">
+                <!-- Dynamically populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Teacher Remarks -->
+        <div class="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
+          <h4 class="text-xs font-bold text-navy-800 uppercase tracking-wider">Mentor & Faculty Remarks</h4>
+          <div id="erp-remarks-container" class="space-y-3">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. FEE RECEIPT MODAL (FROM ERP) -->
+  <div id="receipt-modal" class="app-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div class="bg-white rounded-2xl max-w-xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="p-4 bg-navy-950 text-white flex justify-between items-center no-print">
+        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Electronic Fee Receipt</span>
+        <button type="button" onclick="closeModal('receipt-modal')" class="text-slate-400 hover:text-white p-1 rounded">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="receipt-modal-body" class="p-6 overflow-y-auto flex-1">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center no-print">
+        <button type="button" onclick="window.print()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg text-xs flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Print Receipt
+        </button>
+        <button type="button" onclick="closeModal('receipt-modal')" class="px-4 py-2 bg-navy-800 text-white hover:bg-navy-700 font-semibold rounded-lg text-xs transition-colors">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. ADMISSION ENQUIRY SUBMISSION CONFIRMATION MODAL -->
+  <div id="admission-confirmation-modal" class="app-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      
+      <div class="p-6 text-center border-b border-slate-100 bg-emerald-50/50">
+        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-inner">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-navy-800 font-heading">Application Received Successfully!</h3>
+        <p class="text-xs text-slate-500 mt-1">Thank you for choosing Aurelia Global Academy for your child.</p>
+      </div>
+
+      <div class="p-6 space-y-4 text-xs overflow-y-auto flex-1 printable-area">
+        <div class="p-4 bg-navy-950 text-white rounded-xl text-center space-y-1">
+          <span class="text-[10px] uppercase font-bold text-gold-400 tracking-wider">Application Reference Number</span>
+          <div id="conf-ref-number" class="text-2xl font-extrabold font-mono text-gold-300 tracking-wider">AGA-2027-0000</div>
+          <span class="text-[10px] text-slate-400">Please quote this reference for all admissions correspondence</span>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+          <div class="flex justify-between"><span class="text-slate-500">Student Name:</span><span id="conf-student-name" class="font-bold text-slate-800"></span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Grade Applied:</span><span id="conf-grade" class="font-bold text-slate-800"></span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Parent Name:</span><span id="conf-parent" class="font-bold text-slate-800"></span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Mobile:</span><span id="conf-mobile" class="font-bold text-slate-800"></span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Email:</span><span id="conf-email" class="font-bold text-slate-800"></span></div>
+          <div class="flex justify-between"><span class="text-slate-500">Submission Date:</span><span id="conf-date" class="font-bold text-slate-800"></span></div>
+        </div>
+
+        <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-amber-900 text-[11px] leading-relaxed">
+          <strong>Next Steps:</strong> An admissions coordinator from our Gurugram campus will contact you within 24 working hours to schedule the diagnostic assessment and campus interaction.
+        </div>
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center no-print">
+        <button type="button" onclick="window.print()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg text-xs flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Print Slip
+        </button>
+        <button type="button" onclick="closeModal('admission-confirmation-modal')" class="px-4 py-2 bg-navy-800 text-white hover:bg-navy-700 font-semibold rounded-lg text-xs transition-colors">
+          Done
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATIONS CONTAINER
+       ======================================================================== -->
+  <div id="toast-container" class="fixed top-24 right-4 sm:right-6 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
