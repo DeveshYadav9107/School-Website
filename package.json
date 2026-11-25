@@ -1,7 +1,7 @@
 {
-  "name": "aurelia-global-academy",
+  "name": "rms-world-school",
   "version": "1.0.0",
-  "description": "Official website for Aurelia Global Academy (CBSE Affiliation No. 531849, Gurugram, India)",
+  "description": "Official website for RMS World School (CBSE Norms & Curriculum, Sulkha, Haryana)",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -11,10 +11,12 @@
   },
   "keywords": [
     "cbse-school",
-    "gurugram",
+    "haryana",
+    "rewari",
+    "sulkha",
     "education",
     "k12",
-    "aurelia-global-academy",
+    "rms-world-school",
     "nextjs",
     "react",
     "tailwind"

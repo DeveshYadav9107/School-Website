@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://aureliaglobal.edu.in/sitemap.xml',
+    sitemap: 'https://rmsworldschool.edu.in/sitemap.xml',
   };
 }

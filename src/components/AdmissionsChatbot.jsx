@@ -9,7 +9,7 @@ export function AdmissionsChatbot() {
   const [messages, setMessages] = useState([
     {
       sender: 'bot',
-      text: "Namaste! Welcome to Aurelia Global Academy. I am Aurelia's Admissions Assistant. How may I help you today? You can select a quick question below or type your query.",
+      text: "Namaste! Welcome to RMS World School (Sulkha, Haryana). I am your Admissions & Recruitment Assistant. Select a quick question below or type your query.",
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -17,6 +17,7 @@ export function AdmissionsChatbot() {
   const messagesEndRef = useRef(null);
 
   const quickQuestions = [
+    { label: 'Faculty Walk-In', q: 'What are the faculty walk-in interview details?' },
     { label: 'Timings', q: 'What are the school timings?' },
     { label: 'Nursery Age', q: 'What is the age criteria for Nursery?' },
     { label: 'Bus Transport', q: 'Is GPS bus transport available?' },
@@ -43,9 +44,9 @@ export function AdmissionsChatbot() {
     );
 
     const replyText = matched ? matched.answer : `
-      Thank you for your enquiry regarding "<em>${text}</em>". 
-      For specific questions, our Admissions Counselors are available at <strong>${AGA_DATA.school.phone}</strong> 
-      or via email at <strong>${AGA_DATA.school.email}</strong>. You can also book a campus tour to explore our facilities in person!
+      Thank you for contacting RMS World School regarding "<em>${text}</em>". 
+      For admissions or recruitment enquiries, please call our helpdesk at <strong>${AGA_DATA.school.phone}</strong> or <strong>${AGA_DATA.school.phoneAlt}</strong>, 
+      or email <strong>${AGA_DATA.school.email}</strong>.
     `;
 
     setTimeout(() => {
@@ -66,7 +67,7 @@ export function AdmissionsChatbot() {
           <MessageSquare className="w-6 h-6 text-gold-400" />
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full border border-navy-900" />
         </div>
-        <span className="text-xs font-bold tracking-tight pr-1 hidden sm:inline">Admissions Help</span>
+        <span className="text-xs font-bold tracking-tight pr-1 hidden sm:inline">RMS Help Desk</span>
       </button>
 
       {isOpen && (
@@ -74,13 +75,13 @@ export function AdmissionsChatbot() {
           <div className="bg-navy-900 text-white p-4 flex items-center justify-between border-b border-navy-800">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-navy-800 border border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xs">
-                AGA
+                RMS
               </div>
               <div>
-                <h3 className="text-sm font-bold text-white font-heading">Admissions Assistant</h3>
+                <h3 className="text-sm font-bold text-white font-heading">RMS World School Help</h3>
                 <p className="text-[10px] text-emerald-400 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  Live • Admissions Desk
+                  Live • Admissions &amp; Careers Desk
                 </p>
               </div>
             </div>
@@ -145,7 +146,7 @@ export function AdmissionsChatbot() {
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
-              placeholder="Type your query regarding admissions..."
+              placeholder="Ask about admissions, fees, or careers..."
               className="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-800"
             />
             <button

@@ -17,24 +17,24 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://aureliaglobal.edu.in'),
+  metadataBase: new URL('https://rmsworldschool.edu.in'),
   title: {
-    default: 'Aurelia Global Academy | Premier CBSE K-12 Institution | Gurugram, India',
-    template: '%s | Aurelia Global Academy',
+    default: 'RMS World School | CBSE Norms & Curriculum | Sulkha, Haryana',
+    template: '%s | RMS World School',
   },
-  description: 'Aurelia Global Academy is a premier CBSE affiliated Senior Secondary school (Affiliation No. 531849) located in Sector 48, Gurugram. Admissions now open for academic session 2027-28.',
+  description: 'RMS World School at 11th Milestone, Rewari-Shahjahanpur Road, Sulkha (Haryana) — CBSE Norms & Curriculum K-12 Institution. Admissions & Faculty Walk-In Interviews Open.',
   keywords: [
-    'Aurelia Global Academy',
-    'CBSE School Gurugram',
-    'Best School in Gurgaon',
+    'RMS World School',
+    'CBSE School Sulkha Haryana',
+    'CBSE School Rewari Shahjahanpur Road',
     'Admissions 2027-28',
-    'Senior Secondary CBSE School',
-    'K-12 Education Gurugram',
-    'STEM School Haryana',
+    'Faculty Recruitment RMS World School',
+    'Senior Secondary CBSE School Haryana',
+    'K-12 Education Haryana',
   ],
-  authors: [{ name: 'Aurelia Global Academy' }],
-  creator: 'Aurelia Global Academy',
-  publisher: 'Aurelia Global Academy',
+  authors: [{ name: 'RMS World School' }],
+  creator: 'RMS World School',
+  publisher: 'RMS World School',
   formatDetection: {
     email: true,
     address: true,
@@ -43,15 +43,15 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://aureliaglobal.edu.in',
-    title: 'Aurelia Global Academy | Premier CBSE K-12 Institution',
-    description: 'Nurturing Curiosity, Shaping Character. Admissions Open for 2027-28. CBSE Affiliation No. 531849.',
-    siteName: 'Aurelia Global Academy',
+    url: 'https://rmsworldschool.edu.in',
+    title: 'RMS World School | CBSE Norms & Curriculum',
+    description: 'Nurturing Curiosity, Shaping Character. 11th Milestone, Rewari-Shahjahanpur Road, Sulkha (Haryana).',
+    siteName: 'RMS World School',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aurelia Global Academy | Gurugram',
-    description: 'Nurturing Curiosity, Shaping Character. CBSE Affiliation No. 531849. Admissions Open 2027-28.',
+    title: 'RMS World School | Sulkha, Haryana',
+    description: 'Nurturing Curiosity, Shaping Character. CBSE Norms & Curriculum. Contact: +91 9728035202, +91 7988720175.',
   },
   robots: {
     index: true,
@@ -68,7 +68,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#0F2547',
+  themeColor: '#0B2545',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,

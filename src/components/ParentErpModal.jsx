@@ -50,11 +50,11 @@ export function ParentErpModal({ isOpen, onClose }) {
         <div className="p-4 sm:p-5 bg-navy-950 text-white flex justify-between items-center border-b border-navy-800">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-navy-800 border border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xs">
-              ERP
+              RMS
             </div>
             <div>
-              <h3 className="text-sm sm:text-base font-bold font-heading">Aurelia Parent ERP Portal</h3>
-              <p className="text-[11px] text-slate-400">Edunext Academic & Fee Management System</p>
+              <h3 className="text-sm sm:text-base font-bold font-heading">RMS World School Parent ERP Portal</h3>
+              <p className="text-[11px] text-slate-400">Edunext Academic &amp; Fee Management System</p>
             </div>
           </div>
           <button
@@ -72,7 +72,7 @@ export function ParentErpModal({ isOpen, onClose }) {
               <div className="text-center">
                 <span className="px-3 py-1 bg-gold-100 text-gold-800 text-xs font-bold rounded-full uppercase">Demo Access Available</span>
                 <h2 className="text-2xl font-bold text-navy-800 font-heading mt-2">Sign In to Parent Portal</h2>
-                <p className="text-xs text-slate-500 mt-1">Access real-time attendance, quarterly fee ledger, exam marks & teacher remarks.</p>
+                <p className="text-xs text-slate-500 mt-1">Access real-time attendance, quarterly fee ledger, exam marks &amp; teacher remarks.</p>
               </div>
 
               <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs flex items-center justify-between">
@@ -97,7 +97,7 @@ export function ParentErpModal({ isOpen, onClose }) {
                     required
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    placeholder="e.g. aarav.sharma@parent.aga"
+                    placeholder="e.g. aarav.sharma@parent.rms"
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-navy-800 focus:outline-none"
                   />
                 </div>
@@ -123,7 +123,7 @@ export function ParentErpModal({ isOpen, onClose }) {
               </form>
 
               <p className="text-[11px] text-center text-slate-400">
-                For password reset assistance, contact IT Helpdesk at <span className="text-slate-600 font-medium">erp-support@aureliaglobal.edu.in</span>.
+                For password reset assistance, call <span className="text-slate-600 font-medium">+91 9728035202</span> or email <span className="text-slate-600 font-medium">erp-support@rmsworldschool.edu.in</span>.
               </p>
             </div>
           </div>
@@ -267,7 +267,7 @@ export function ParentErpModal({ isOpen, onClose }) {
             </div>
 
             <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
-              <h4 className="text-xs font-bold text-navy-800 uppercase tracking-wider">Mentor & Faculty Remarks</h4>
+              <h4 className="text-xs font-bold text-navy-800 uppercase tracking-wider">Mentor &amp; Faculty Remarks</h4>
               <div className="space-y-3">
                 {AGA_DATA.erpDemoUser.remarks.map((r, idx) => (
                   <div key={idx} className="p-3 bg-slate-50 rounded-lg border border-slate-200">
@@ -304,7 +304,7 @@ export function ParentErpModal({ isOpen, onClose }) {
                 <div>
                   <h2 className="text-lg font-bold text-navy-800">{AGA_DATA.school.name}</h2>
                   <p className="text-xs text-slate-500">{AGA_DATA.school.address}</p>
-                  <p className="text-[11px] text-slate-500">CBSE Affiliation No: {AGA_DATA.school.affiliationNo}</p>
+                  <p className="text-[11px] text-slate-500">{AGA_DATA.school.board}</p>
                 </div>
                 <div className="text-right">
                   <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full uppercase">Official Receipt</span>
@@ -316,7 +316,7 @@ export function ParentErpModal({ isOpen, onClose }) {
               <div className="grid grid-cols-2 gap-4 text-xs bg-slate-50 p-3 rounded-lg border border-slate-200 mb-4">
                 <div><strong>Student Name:</strong> {stu.name}</div>
                 <div><strong>Admission No:</strong> {stu.admissionNo}</div>
-                <div><strong>Grade & Section:</strong> {stu.grade}</div>
+                <div><strong>Grade &amp; Section:</strong> {stu.grade}</div>
                 <div><strong>Parent Name:</strong> Dr. Vikramaditya Sharma</div>
               </div>
 
@@ -333,7 +333,7 @@ export function ParentErpModal({ isOpen, onClose }) {
                     <td className="py-2 px-3 text-right font-medium">₹ 35,000</td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-3">Development & IT Charges</td>
+                    <td className="py-2 px-3">Development &amp; IT Charges</td>
                     <td className="py-2 px-3 text-right font-medium">₹ 6,500</td>
                   </tr>
                   <tr>
@@ -354,7 +354,7 @@ export function ParentErpModal({ isOpen, onClose }) {
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-slate-800">Accounts Department</p>
-                  <p className="text-[10px]">Aurelia Global Academy</p>
+                  <p className="text-[10px]">RMS World School</p>
                 </div>
               </div>
             </div>

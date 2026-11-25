@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { AGA_DATA } from '@/data/academyData';
 import { X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { RevealOnScroll } from './RevealOnScroll';
 
 export function CampusGallery() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -61,36 +62,37 @@ export function CampusGallery() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.map((item, index) => (
-          <div
-            key={item.id}
-            onClick={() => setLightboxIndex(index)}
-            className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-slate-900 cursor-pointer aspect-[4/3]"
-          >
-            <img
-              src={item.thumb}
-              alt={item.title}
-              loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+          <RevealOnScroll key={item.id} delay={(index % 6) * 60} variant="fade-up">
+            <div
+              onClick={() => setLightboxIndex(index)}
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 card-glow bg-slate-900 cursor-pointer aspect-[4/3]"
+            >
+              <img
+                src={item.thumb}
+                alt={item.title}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
-            <div className="absolute top-3 left-3">
-              <span className="px-2.5 py-1 text-xs font-semibold bg-white/90 backdrop-blur-md text-navy-900 rounded-full shadow">
-                {item.categoryLabel}
-              </span>
-            </div>
+              <div className="absolute top-3 left-3">
+                <span className="px-2.5 py-1 text-xs font-semibold bg-white/90 backdrop-blur-md text-navy-900 rounded-full shadow">
+                  {item.categoryLabel}
+                </span>
+              </div>
 
-            <div className="absolute bottom-0 inset-x-0 p-4 transform translate-y-1 group-hover:translate-y-0 transition-transform">
-              <h4 className="text-white font-bold text-sm sm:text-base leading-snug drop-shadow">{item.title}</h4>
-              <p className="text-xs text-slate-300 mt-1 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {item.caption}
-              </p>
-              <div className="mt-2 flex items-center text-gold-400 text-xs font-semibold gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span>Click to enlarge</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <div className="absolute bottom-0 inset-x-0 p-4 transform translate-y-1 group-hover:translate-y-0 transition-transform">
+                <h4 className="text-white font-bold text-sm sm:text-base leading-snug drop-shadow">{item.title}</h4>
+                <p className="text-xs text-slate-300 mt-1 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {item.caption}
+                </p>
+                <div className="mt-2 flex items-center text-gold-400 text-xs font-semibold gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span>Click to enlarge</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </div>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
         ))}
       </div>
 

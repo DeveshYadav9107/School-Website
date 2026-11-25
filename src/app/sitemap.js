@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://aureliaglobal.edu.in';
+  const baseUrl = 'https://rmsworldschool.edu.in';
   const currentDate = new Date().toISOString();
 
   return [
@@ -38,6 +38,12 @@ export default function sitemap() {
       lastModified: currentDate,
       changeFrequency: 'yearly',
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/#careers`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/#contact`,

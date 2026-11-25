@@ -1,42 +1,61 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,jsx,mdx}",
+    "./src/components/**/*.{js,jsx,mdx}",
+    "./src/app/**/*.{js,jsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
         navy: {
-          50: '#F0F4FA',
-          100: '#D9E3F3',
-          200: '#B3C8E7',
-          300: '#81A4D6',
-          400: '#4F7EC4',
-          500: '#2A5BB2',
-          600: '#1C428C',
-          700: '#15336C',
-          800: '#0F2547', // Primary Brand Color
-          900: '#0A1830',
-          950: '#050D1B',
+          50: '#EEF3F9',
+          100: '#D4E0F0',
+          200: '#A9C2E1',
+          300: '#769BCE',
+          400: '#4973B6',
+          500: '#275197',
+          600: '#1B3C76',
+          700: '#122F5D',
+          800: '#0B2545', // Classic Dark Navy Blue Primary Brand Color
+          900: '#071A33',
+          950: '#041021',
         },
         gold: {
-          50: '#FDFBF4',
-          100: '#FAF3DD',
-          200: '#F3E4B3',
-          300: '#EBD184',
-          400: '#E2BC55',
-          500: '#D99B26', // Warm Gold Accent
-          600: '#BA801C',
-          700: '#946316',
-          800: '#734A12',
-          900: '#52340E',
+          50: '#FCF9F2',
+          100: '#F7EED9',
+          200: '#EEDBB2',
+          300: '#E3C68A',
+          400: '#D4B26C',
+          500: '#C5A059', // Antique Gold Accent
+          600: '#A8843F',
+          700: '#85662D',
+          800: '#664D21',
+          900: '#473517',
         }
       },
       fontFamily: {
         heading: ['var(--font-jakarta)', 'sans-serif'],
         sans: ['var(--font-inter)', 'sans-serif'],
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.25s ease-out forwards',
+        'slide-left': 'slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'fade-up': 'fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       }
     },
   },
